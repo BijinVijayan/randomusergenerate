@@ -1,0 +1,40 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4">
+            <!-- <pre>
+                {{user |json}}
+            </pre> -->
+        </div>
+        <div class="col-md-4 pt-5 pb-5 text-center">
+            <h2 class="mb-5 pb-5" [ngStyle]="{ 'color': '#' + bgColor }">Random User View</h2>
+            <div class="p-3" [ngStyle]="{ 'background-color': '#' + bgColor }">
+                <div class="mb-5">
+                    <div class="img position-relative">
+                        <div class="position-absolute top-0 start-50 translate-middle rounded-circle" [ngStyle]="{ 'background-color': '#' + bgColor }">
+                            <img [src]="user.image" alt=""
+                                class="rounded-circle  border-2 border-light img-fluid  border border-5 border-light">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="pt-5">
+                    <ul class="  bg-secondary p-3">
+                        <li class="list-group-item border-0"><span>{{ user.firstName + " " + user.lastName }}</span></li>
+                        <li class="list-group-item border-0"><span>{{user.age}}</span></li>
+                        <li class="list-group-item border-0"><span> {{user.phone}}</span></li>
+                        <li class="list-group-item border-0"><span>{{user.address.address}}</span></li>
+                        <li class="list-group-item border-0"><span>{{user.email}}</span></li>
+                    </ul>
+               
+            </div>
+            <div class="generate p-3">
+                <button (click)="getUser()" class="btn" [ngStyle]="{ 'background-color': '#' + bgColor }" >
+                    <i class="fa-solid fa-arrows-rotate"></i> Generate
+                </button>
+
+            </div>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>
